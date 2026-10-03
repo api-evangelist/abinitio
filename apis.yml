@@ -1,23 +1,74 @@
 aid: abinitio
+
 name: Ab Initio
-description: 'Ab Initio is a company surfaced via the API Evangelist harvest backlog (source: gartner-mq)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.abinitio.com/pub/abinitio-og.jpg
+
+description: Ab Initio provides an enterprise data platform that enables large-scale data processing, integration, and analytics across diverse
+  industries. Its software automates data ingestion, transformation, and delivery, supporting batch and real‑time workloads on cloud and on‑premises
+  environments. The platform emphasizes scalability, self‑service, and governance, helping organizations turn massive data streams into actionable
+  insights.
+
 url: https://raw.githubusercontent.com/api-evangelist/abinitio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:gartner-mq
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-03 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-03'
+
 modified: '2026-10-03'
+
 tags:
 - Company
-apis: []
+- Data Platform
+- Enterprise Software
+- Integration
+- Analytics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/abinitio-hosts.yml
+- type: Vendors
+  url: vendors/abinitio-vendors.yml
+- type: TermsOfService
+  url: https://www.abinitio.com/de/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.abinitio.com/de/privacy-policy/
+- type: DomainSecurity
+  url: security/abinitio-domain-security.yml
 - type: Website
   url: https://www.abinitio.com
+
+apis:
+- name: Ab Initio Help Library
+  description: Help library for Ab Initio platform
+  humanURL: https://docs.abinitio.com
+  baseURL: null
+  aid: abinitio:ab-initio-help-library
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs site returns only a JavaScript shell with no machine‑readable spec.
+  evidence:
+  - url: https://docs.abinitio.com
+    status: 200
+  checked: '2026-10-03'
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
